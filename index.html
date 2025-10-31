@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- LOGIN & SIGNUP -->
   <div class="container" id="authContainer">
-    <!-- LOGIN FORM -->
     <form id="loginForm" class="form">
       <h1>Welcome to <span>JPMAP</span></h1>
       <input type="text" id="username" placeholder="Username" required />
@@ -17,7 +17,6 @@
       <p>Don’t have an account? <a href="#" id="toSignup">Sign up</a></p>
     </form>
 
-    <!-- SIGNUP FORM -->
     <form id="signupForm" class="form hidden">
       <h1>Create your <span>JPMAP</span> account</h1>
       <input type="text" id="newUser" placeholder="New Username" required />
@@ -36,33 +35,51 @@
 
   <!-- HOME PAGE -->
   <div class="home hidden" id="homePage">
+    <!-- NAVBAR -->
     <nav class="navbar">
-      <h2>JPMAP</h2>
-      <input type="text" placeholder="Search..." id="searchBar" />
-      <div class="nav-buttons">
-        <button id="accountBtn">Account</button>
-        <button id="logoutBtn">Logout</button>
+      <div class="nav-left">
+        <div class="hamburger" id="hamburger">☰</div>
+        <h2>JPMAP</h2>
+        <!-- Navbar Avatar -->
+        <img src="profile.jpg" alt="Avatar" id="navAvatar" class="nav-avatar">
       </div>
+      <input type="text" placeholder="Search..." id="searchBar" />
     </nav>
 
-    <section class="main-content">
-      <h1>Welcome, <span id="displayUser"></span>!</h1>
-      <p>You’ve successfully entered the JPMAP network. Explore your control interface.</p>
-      <div class="captives">
-        <div class="card">
-          <h3>Mission Panel</h3>
-          <p>Track your progress and upcoming assignments here.</p>
-        </div>
-        <div class="card">
-          <h3>Resource Hub</h3>
-          <p>Access learning materials, tools, and updates from JPMAP.</p>
-        </div>
-        <div class="card">
-          <h3>Activity Feed</h3>
-          <p>Stay updated on recent operations and communications.</p>
-        </div>
-      </div>
-    </section>
+    <!-- SIDE MENU -->
+    <div class="side-menu" id="sideMenu">
+      <button id="closeMenu">✖</button>
+      <h3>Menu</h3>
+      <button id="accountSide">Account</button>
+      <button id="homeSideBtn">Home</button>
+      <button id="settingsSide">Settings</button>
+      <button id="logoutSide">Logout</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <section class="intro-section">
+        <h1>Welcome, <span id="displayUser"></span>!</h1>
+        <p>You’ve successfully entered the JPMAP network. Explore your control interface.</p>
+      </section>
+
+      <section class="captives">
+        <div class="card"><h3>Mission Panel</h3><p>Track your progress and upcoming assignments here.</p></div>
+        <div class="card"><h3>Resource Hub</h3><p>Access learning materials, tools, and updates from JPMAP.</p></div>
+        <div class="card"><h3>Activity Feed</h3><p>Stay updated on recent operations and communications.</p></div>
+        <div class="card"><h3>New Log System</h3><p>See your latest logs and progress updates here.</p></div>
+        <div class="card"><h3>AI Assistant</h3><p>Chat with your built-in JPMAP AI partner.</p></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- PROFILE PAGE -->
+  <div class="profile hidden" id="profilePage">
+    <button id="profileHomeBtn">← Home</button>
+    <h1>Your Profile</h1>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" id="profilePic" />
+    <p id="profileName">Username: <span id="profileUsername"></span></p>
+    <input type="file" id="avatarInput" accept="image/*" />
   </div>
 
   <script src="script.js"></script>
