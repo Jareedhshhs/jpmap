@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPMAP Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="authContainer">
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="form">
+      <h1>Welcome to <span>JPMAP</span></h1>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p>Don’t have an account? <a href="#" id="toSignup">Sign up</a></p>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" class="form hidden">
+      <h1>Create your <span>JPMAP</span> account</h1>
+      <input type="text" id="newUser" placeholder="New Username" required />
+      <input type="password" id="newPass" placeholder="New Password" required />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="#" id="toLogin">Login</a></p>
+    </form>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard hidden" id="dashboard">
+    <h1>Welcome to <span>JPMAP</span></h1>
+    <p>Your futuristic control hub is now active.</p>
+    <button id="getStartedBtn">Get Started</button>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div class="home hidden" id="homePage">
+    <nav class="navbar">
+      <h2>JPMAP</h2>
+      <input type="text" placeholder="Search..." id="searchBar" />
+      <div class="nav-buttons">
+        <button id="accountBtn">Account</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </nav>
+
+    <section class="main-content">
+      <h1>Welcome, <span id="displayUser"></span>!</h1>
+      <p>You’ve successfully entered the JPMAP network. Explore your control interface.</p>
+      <div class="captives">
+        <div class="card">
+          <h3>Mission Panel</h3>
+          <p>Track your progress and upcoming assignments here.</p>
+        </div>
+        <div class="card">
+          <h3>Resource Hub</h3>
+          <p>Access learning materials, tools, and updates from JPMAP.</p>
+        </div>
+        <div class="card">
+          <h3>Activity Feed</h3>
+          <p>Stay updated on recent operations and communications.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
